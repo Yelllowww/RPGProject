@@ -47,7 +47,17 @@ while (true) {
                     UseShellExecute = true
                     });
                 }
-                
+            }
+            else if (exit == "e")
+            {
+                bool salvou = MiniEditor.EditarAgenteEmTelaUnica(agente, cabecalho, input);
+
+                if (salvou)
+                {
+                    agentes[input] = agente; // garante que o dicionário atualiza
+
+                    MiniEditor.SalvarAgentes("agentes.json", agentes); // grava no arquivo
+                }
             }
             else if (exit == "") {break;}
             else {return;}

@@ -1,7 +1,47 @@
 {
-    "Tito":  { "PV": 0, "PE": 0, "Sanidade": 0, "Defesa": 0, "Esquiva": 0, "Link":""},
-    "Gregório": { "PV": 0, "PE": 0, "Sanidade": 0, "Defesa": 0, "Esquiva": 0, "Link":""},
-    "Viktor": { "PV": 0, "PE": 0, "Sanidade": 0, "Defesa": 0, "Esquiva": 0, "Link":""},
-    "Conrad": { "PV": 0, "PE": 0, "Sanidade": 0, "Defesa": 0, "Esquiva": 0, "Link":""},
-    "Jaime": { "PV": 0, "PE": 0, "Sanidade": 0, "Defesa": 0, "Esquiva": 0, "Link":""}
+  "Tito": {
+    "Nome": "",
+    "PV": 30,
+    "PE": 90,
+    "Sanidade": 0,
+    "Defesa": 0,
+    "Esquiva": 0,
+    "Link": "https://crisordemparanormal.com/agente/MMI19vrx0TKAivwmlvbR"
+  },
+  "Greg\u00F3rio": {
+    "Nome": "",
+    "PV": 0,
+    "PE": 0,
+    "Sanidade": 0,
+    "Defesa": 0,
+    "Esquiva": 0,
+    "Link": ""
+  },
+  "Viktor": {
+    "Nome": "",
+    "PV": 0,
+    "PE": 0,
+    "Sanidade": 0,
+    "Defesa": 0,
+    "Esquiva": 0,
+    "Link": ""
+  },
+  "Conrad": {
+    "Nome": "",
+    "PV": 0,
+    "PE": 0,
+    "Sanidade": 0,
+    "Defesa": 0,
+    "Esquiva": 0,
+    "Link": ""
+  },
+  "Jaime": {
+    "Nome": "",
+    "PV": 0,
+    "PE": 0,
+    "Sanidade": 0,
+    "Defesa": 0,
+    "Esquiva": 0,
+    "Link": ""
+  }
 }
