@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "C#: Debug RPGProject (dll)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/bin/Debug/net10.0/RPGProject.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "C#: Debug RPGProject (csproj)",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/RPGProject.csproj"
+        },
+        {
+            "name": "C#: Debug Active File",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${file}"
+        }
+    ]
+}
