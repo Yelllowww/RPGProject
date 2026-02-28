@@ -5,6 +5,15 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>icon\MEDO.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="agentes.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <Target Name="CreateRootShortcut" AfterTargets="Build">
+    <Exec Command="powershell -NoProfile -WindowStyle Hidden -Command &quot;$s=(New-Object -COM WScript.Shell).CreateShortcut('$(MSBuildProjectDirectory)\RPGProject.lnk');$s.TargetPath='$(MSBuildProjectDirectory)\$(OutputPath)$(AssemblyName).exe';$s.WorkingDirectory='$(MSBuildProjectDirectory)\$(OutputPath)';$s.IconLocation='C:\Users\Ed\Desktop\RPGProject\icon\MEDO.ico,0';$s.Save()&quot;" />
+  </Target>
 
 </Project>

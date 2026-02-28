@@ -1,0 +1,5 @@
+C:\Users\Ed\Desktop\RPGProject\obj\Debug\RPGProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ed\Desktop\RPGProject\obj\Debug\RPGProject.AssemblyInfoInputs.cache
+C:\Users\Ed\Desktop\RPGProject\obj\Debug\RPGProject.AssemblyInfo.cs
+C:\Users\Ed\Desktop\RPGProject\obj\Debug\RPGProject.csproj.CoreCompileInputs.cache
+C:\Users\Ed\Desktop\RPGProject\obj\Debug\RPGProject.sourcelink.json

@@ -3,7 +3,6 @@ using System.Text.Json;
 
 static class MiniEditor
 {
-    // Retorna true = salvou (Enter), false = cancelou (Esc)
     public static bool EditarAgenteEmTelaUnica(Agente agente, string cabecalho, string agenteKey)
     {
         var labels = new[] { "PV", "PE", "Sanidade", "Defesa", "Esquiva", "Link" };
@@ -19,14 +18,15 @@ static class MiniEditor
             new StringBuilder(agente.Link ?? "")
         };
 
-        // posição do cursor dentro do campo selecionado (0..Length)
         var cursors = new int[buffers.Length];
         for (int i = 0; i < cursors.Length; i++)
             cursors[i] = buffers[i].Length;
 
         int selected = 0;
+#pragma warning disable CA1416
         bool oldCursor = Console.CursorVisible;
         Console.CursorVisible = false;
+#pragma warning restore CA1416
 
         try
         {
@@ -64,7 +64,6 @@ static class MiniEditor
                     continue;
                 }
 
-                // Left/Right move o cursor dentro do campo
                 if (key.Key == ConsoleKey.LeftArrow)
                 {
                     if (cursors[selected] > 0) cursors[selected]--;
@@ -77,7 +76,6 @@ static class MiniEditor
                     continue;
                 }
 
-                // Home/End (opcional, mas ajuda bastante)
                 if (key.Key == ConsoleKey.Home)
                 {
                     cursors[selected] = 0;
@@ -90,7 +88,6 @@ static class MiniEditor
                     continue;
                 }
 
-                // Backspace remove o char ANTES do cursor
                 if (key.Key == ConsoleKey.Backspace)
                 {
                     if (cursors[selected] > 0)
@@ -101,7 +98,6 @@ static class MiniEditor
                     continue;
                 }
 
-                // Delete remove o char NA posição do cursor
                 if (key.Key == ConsoleKey.Delete)
                 {
                     if (cursors[selected] < buffers[selected].Length)
@@ -115,14 +111,15 @@ static class MiniEditor
                 if (isInt[selected] && !char.IsDigit(key.KeyChar))
                     continue;
 
-                // Insere no meio (na posição do cursor)
                 buffers[selected].Insert(cursors[selected], key.KeyChar);
                 cursors[selected]++;
             }
         }
         finally
         {
+#pragma warning disable CA1416
             Console.CursorVisible = oldCursor;
+#pragma warning restore CA1416
         }
     }
 
@@ -144,11 +141,10 @@ static class MiniEditor
         Console.WriteLine(cabecalho);
         Console.WriteLine($"Editando: {agenteKey}");
         Console.WriteLine();
+        Console.WriteLine("Enter: salvar | Esc: cancelar");
         Console.WriteLine("Tab/↑/↓: navegar | ←/→: mover cursor | Digitar: inserir | Backspace/Delete: apagar");
-        Console.WriteLine("Home/End: início/fim | Enter: salvar | Esc: cancelar");
         Console.WriteLine();
 
-        // Guardamos a posição (coluna/linha) do cursor “virtual” para desenhar ele
         int cursorLine = -1;
         int cursorCol = -1;
 
@@ -176,7 +172,6 @@ static class MiniEditor
                 Console.BackgroundColor = bg;
                 Console.ForegroundColor = fg;
 
-                // Cursor fica na mesma linha que escrevemos, após "left" + cursorPos
                 cursorLine = lineStartTop;
                 cursorCol = left.Length + cursorPosInSelectedField;
             }
@@ -187,14 +182,11 @@ static class MiniEditor
                 Console.WriteLine();
             }
 
-            _ = lineStartLeft; // só pra não confundir: mantemos o raciocínio da coluna 0
+            _ = lineStartLeft;
         }
 
-        // Desenha um “cursor” simples reposicionando o cursor real
-        // (mantém CursorVisible=false; mas SetCursorPosition ajuda a dar feedback visual)
         if (cursorLine >= 0 && cursorCol >= 0)
         {
-            // Evita exceção se a janela for pequena
             cursorCol = Math.Clamp(cursorCol, 0, Math.Max(0, Console.BufferWidth - 1));
             cursorLine = Math.Clamp(cursorLine, 0, Math.Max(0, Console.BufferHeight - 1));
             Console.SetCursorPosition(cursorCol, cursorLine);
@@ -226,7 +218,6 @@ static class MiniEditor
         error = "";
         var text = sb.ToString();
 
-        // vazio => 0 (permite apagar e confirmar)
         if (text.Length == 0)
         {
             value = 0;
