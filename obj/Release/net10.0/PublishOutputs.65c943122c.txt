@@ -1,0 +1,6 @@
+C:\Users\Ed\Desktop\RPGProject\bin\Release\net10.0\publish\RPGProject.exe
+C:\Users\Ed\Desktop\RPGProject\bin\Release\net10.0\publish\agentes.json
+C:\Users\Ed\Desktop\RPGProject\bin\Release\net10.0\publish\RPGProject.dll
+C:\Users\Ed\Desktop\RPGProject\bin\Release\net10.0\publish\RPGProject.deps.json
+C:\Users\Ed\Desktop\RPGProject\bin\Release\net10.0\publish\RPGProject.runtimeconfig.json
+C:\Users\Ed\Desktop\RPGProject\bin\Release\net10.0\publish\RPGProject.pdb

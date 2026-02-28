@@ -1,0 +1,16 @@
+C:\Users\Ed\Desktop\RPGProject\bin\Release\net10.0\agentes.json
+C:\Users\Ed\Desktop\RPGProject\bin\Release\net10.0\RPGProject.exe
+C:\Users\Ed\Desktop\RPGProject\bin\Release\net10.0\RPGProject.deps.json
+C:\Users\Ed\Desktop\RPGProject\bin\Release\net10.0\RPGProject.runtimeconfig.json
+C:\Users\Ed\Desktop\RPGProject\bin\Release\net10.0\RPGProject.dll
+C:\Users\Ed\Desktop\RPGProject\bin\Release\net10.0\RPGProject.pdb
+C:\Users\Ed\Desktop\RPGProject\obj\Release\net10.0\RPGProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ed\Desktop\RPGProject\obj\Release\net10.0\RPGProject.AssemblyInfoInputs.cache
+C:\Users\Ed\Desktop\RPGProject\obj\Release\net10.0\RPGProject.AssemblyInfo.cs
+C:\Users\Ed\Desktop\RPGProject\obj\Release\net10.0\RPGProject.csproj.CoreCompileInputs.cache
+C:\Users\Ed\Desktop\RPGProject\obj\Release\net10.0\RPGProject.sourcelink.json
+C:\Users\Ed\Desktop\RPGProject\obj\Release\net10.0\RPGProject.dll
+C:\Users\Ed\Desktop\RPGProject\obj\Release\net10.0\refint\RPGProject.dll
+C:\Users\Ed\Desktop\RPGProject\obj\Release\net10.0\RPGProject.pdb
+C:\Users\Ed\Desktop\RPGProject\obj\Release\net10.0\RPGProject.genruntimeconfig.cache
+C:\Users\Ed\Desktop\RPGProject\obj\Release\net10.0\ref\RPGProject.dll
